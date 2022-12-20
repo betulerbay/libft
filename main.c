@@ -6,7 +6,7 @@
 /*   By: berbay <berbay@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 11:48:42 by berbay            #+#    #+#             */
-/*   Updated: 2022/12/16 15:25:22 by berbay           ###   ########.fr       */
+/*   Updated: 2022/12/20 17:18:00 by berbay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@
     printf("%lu", strlen(a));
 }*/
 
-int main ()
+/*int main ()
 {
-    char src[] = "bilgisayar";
-    char dst[] = "yey";
+    char src[] = "hızlı bilgisayar";
+    char dst[] = "bil";
     //printf("%s\n", ft_strchr(a, 'a'));
     //printf("%s\n", strchr(a, 'a'));
     //printf("%s\n", strrchr(a, 'a'));
@@ -58,7 +58,9 @@ int main ()
     //printf ("%zu", strlcpy(dst, src, 3));
     printf ("%zu\n", ft_strlcat(dst, src, 3));
     printf ("%zu", strlcat(dst, src, 3));
-}
+    printf ("%zu\n", ft_strnstr(dst, src, 3));
+    printf ("%zu\n", strnstr(dst, src, 3));
+}*/
 /*
 int main()
 {
@@ -67,3 +69,17 @@ int main()
     printf ("%d\n", ft_strncmp(s1, s2, 4));
     printf ("%d\n", strncmp(s1, s2, 4));
 }*/
+
+//int main ()
+//{
+  //  char s1[] = "bilgisayar";
+    //char s2[] = "bilgi";
+    //printf("%d\n", ft_atoi("  123"));
+    //printf("%d", memcmp(s1, s2, 6));
+//}
+int main ()
+{
+    char *a = "..serif ..";
+    char *z = ".ll";
+    printf ("%s", ft_strtrim(a,z));
+}

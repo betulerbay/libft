@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: berbay <berbay@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/16 11:51:55 by berbay            #+#    #+#             */
-/*   Updated: 2022/12/20 16:59:42 by berbay           ###   ########.fr       */
+/*   Created: 2022/12/17 18:51:12 by berbay            #+#    #+#             */
+/*   Updated: 2022/12/20 17:06:08 by berbay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *dst, const void* src, size_t n)
+void *ft_memmove(void *dst, const void *src, size_t len)
 {
-    size_t i;
+    int i;
 
-    i = 0;
-    if (!*(unsigned char *)dst && !*(unsigned char *)src)
+    if (!*(unsigned char *)src && !*(unsigned char *)dst)
         return (0);
-    while (i < n)
+    if (dst > src)
     {
-        *(char *)(dst + i) = *(char *)(src + i);
-        i ++;
+        i = (int)len - 1;
+        while (i >= 0)
+        {
+            *(char *)(dst + i) = *(char *)(src + i);
+            i --;
+        }
+    }
+    else 
+    {
+        i = 0;
+        while (i < (int)len)
+        {
+            *(char *)(src + i) = *(char *)(dst + i);
+            i ++;
+        }
     }
     return (dst);
 }

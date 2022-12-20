@@ -1,20 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: berbay <berbay@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/12 16:57:56 by berbay            #+#    #+#             */
-/*   Updated: 2022/12/16 13:22:43 by berbay           ###   ########.fr       */
+/*   Created: 2022/12/20 16:16:44 by berbay            #+#    #+#             */
+/*   Updated: 2022/12/20 16:30:26 by berbay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-    if (c <= 122 && c >= 97)
-        c -= 32;
-    return (c);
+	int		in;
+	int		i2;
+	char	*ptr;
+
+	if (!s1 || !s2)
+		return (NULL);
+	ptr = malloc(sizeof (char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!ptr)
+		return (NULL);
+	in = 0;
+	i2 = 0;
+	while (s1[in])
+		ptr[i2++] = s1[in++];
+	in = 0;
+	while (s2[in])
+		ptr[i2++] = s2[in++];
+	ptr[i2] = '\0';
+	return (ptr);
 }
