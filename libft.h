@@ -6,7 +6,7 @@
 /*   By: berbay <berbay@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 19:46:07 by berbay            #+#    #+#             */
-/*   Updated: 2022/12/20 17:17:22 by berbay           ###   ########.fr       */
+/*   Updated: 2022/12/28 19:43:28 by berbay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,8 @@ int					ft_lstsize(t_list *lst);
 
 t_list				*ft_lstlast(t_list *lst);
 
-void				ft_lstadd_front(t_list **alst, t_list *new);
+
+void	ft_lstadd_front(t_list **lst, t_list *new);
 
 void				ft_lstadd_back(t_list **alst, t_list *new);
 
