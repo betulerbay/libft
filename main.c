@@ -6,7 +6,7 @@
 /*   By: berbay <berbay@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 11:48:42 by berbay            #+#    #+#             */
-/*   Updated: 2022/12/29 15:52:41 by berbay           ###   ########.fr       */
+/*   Updated: 2022/12/30 16:39:39 by berbay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,6 +131,10 @@ int main()
 //    }
 //}
 
+f()
+{
+    
+
 int main()
 {
     t_list *lst;
@@ -153,16 +157,16 @@ int main()
    lst2->next = lst3;
    lst3->next = lst4;
 
-   ft_lstadd_back(&lst, lst5);
+   //ft_lstadd_back(&lst, lst5);
    //ft_lstdelone(lst3, free);
-    ft_lstclear(&lst, free);
+    //ft_lstclear(&lst, free);
     
     //ft_lstadd_front(&lst, lst2);
 
     //ft_lstlast yazdırabilmek için printf değeri ne olmalı?
-    //printf("%s", ft_lstlast(lst)-> content);
-    printf("%d", ft_lstsize(lst));
-    printf("%s", lst3->content);
+    printf("%s", ft_lstlast(lst)-> content);
+    //printf("%d", ft_lstsize(lst));
+    //printf("%s", lst3->content);
+    
 
 }
-

@@ -6,7 +6,7 @@
 /*   By: berbay <berbay@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 12:35:01 by berbay            #+#    #+#             */
-/*   Updated: 2022/12/27 21:10:18 by berbay           ###   ########.fr       */
+/*   Updated: 2022/12/30 15:04:24 by berbay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void *ptr;
-	size_t mem;
+	void	*ptr;
+	size_t	mem;
 
-	mem = count * size; // example -> size = typeof(int)
+	mem = count * size;
 	ptr = malloc(mem);
 	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, mem);
 	return (ptr);
 }
-

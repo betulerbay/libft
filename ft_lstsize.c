@@ -6,15 +6,15 @@
 /*   By: berbay <berbay@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 19:47:49 by berbay            #+#    #+#             */
-/*   Updated: 2022/12/28 20:05:56 by berbay           ###   ########.fr       */
+/*   Updated: 2022/12/30 15:35:06 by berbay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (lst)

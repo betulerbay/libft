@@ -1,22 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: berbay <berbay@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/29 14:26:39 by berbay            #+#    #+#             */
-/*   Updated: 2022/12/30 15:34:05 by berbay           ###   ########.fr       */
+/*   Created: 2022/12/30 18:48:09 by berbay            #+#    #+#             */
+/*   Updated: 2022/12/30 19:04:35 by berbay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	if (!lst)
+	t_list	*iter;
+	t_list	*ret;
+
+	if (!lst || !del || !f)
 		return (NULL);
-	while (lst -> next)
-		lst = lst -> next;
-	return (lst);
+	ret = 0;
+	while (lst)
+	{
+		iter = ft_lstnew(f(lst->content));
+		if (iter == NULL)
+		{
+			ft_lstclear(&ret, del);
+			return (0);
+		}
+		ft_lstadd_back(&ret, iter);
+		lst = lst->next;
+	}
+	return (ret);
 }

@@ -6,16 +6,15 @@
 /*   By: berbay <berbay@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:44:48 by berbay            #+#    #+#             */
-/*   Updated: 2022/12/17 16:38:21 by berbay           ###   ########.fr       */
+/*   Updated: 2022/12/30 17:47:28 by berbay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-#include  "libft.h"
-
-char *strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-    size_t	i;
+	size_t	i;
 	size_t	j;
 
 	i = 0;

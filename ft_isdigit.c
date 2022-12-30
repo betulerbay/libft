@@ -6,7 +6,7 @@
 /*   By: berbay <berbay@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 12:12:56 by berbay            #+#    #+#             */
-/*   Updated: 2022/12/27 21:04:57 by berbay           ###   ########.fr       */
+/*   Updated: 2022/12/30 15:06:49 by berbay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int	ft_isdigit(int c)
 {
 	if (c <= '9' && c >= '0')
 		return (1);
-	else 
+	else
 		return (0);
 }
-
